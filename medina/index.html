@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <title>Portfolio Medina Bihorac</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               <img src="slike/logo.png" class="logo">
+           <ul>
+            <li><a href="#">Home</a></li> 
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li> 
+           </ul>
+        
+          </nav>
+          </div class="header-text">
+          <h1 align="center">Medina Bihorac</h1>
+          <h2 align="center">-info about me-</h2>
+    </div>
+    <!-- ----------about--------- -->
+    <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+            <img src="slike/slika1.jpg">
+          </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About Me</h1>
+            <p>I am a student in the 4th grade of Third Gymnasium Sarajevo. I chose the IT major because I want to keep up with the times and expand my knowledge in that field. I like to learn new things and try my hand at different fields. I am most interested in web design and QA engineering, volunteering and continuing to achieve my goals in the sport I have been doing most of my life, karate. I want to work on myself and try new areas in order to improve my skills. In the future, I would like to participate in as many projects as possible and gain as much experience as possible.</p>
+            
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>talkative<br></li>
+                <li>good at teamwork<br></li>
+                <li>resourceful<br></li>
+              </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><br></li>
+              <li><br></li>
+              <li><br></li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+      </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------contact------------ -->
+    <div id="contact">
+      <div class="container">
+       <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact me</h1>
+          <p><i class="fa-regular fa-paper-plane"></i>contact@example.com</p>
+          <p><i class="fa-solid fa-phone"></i>0123456789</p>
+          <div class="social-icons">
+            <a  href=""></a><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="slike/CV-download.docx" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right"></div>
+        <form>
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+          <button type="submit" class="btn btn2">Submit</button> 
+        </form>
+       </div> 
+      </div>
+    </div>
+
+
+    <script>
+
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+
+    </script>
+
+
+  </body>
+
+
+
+  
+  </body>
+</html>
